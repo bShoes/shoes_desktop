@@ -17,6 +17,8 @@
 * sql update t1 set t1.D = t2.D from t1,t2 where t1.A = t2.A
 * orcl update test2 t2 set t2.value=(select t1.value from test1 t1 where t1.name=t2.name) where t2.value2='A';
 * orcl MERGE INTO  a USING  b ON ( a.id = b.id) WHEN MATCHED THEN UPDATE SET a.code = b.code 
+* mysql UPDATE t1  SET  t1.D=(SELECT t2.D FROM t2  WHERE t2.A=t1.A)
+
 
 ## 聚合
 1. COUNT：统计行数量
